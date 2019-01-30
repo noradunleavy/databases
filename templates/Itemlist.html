@@ -12,18 +12,8 @@
   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
   See the License for the specific language governing permissions and
   limitations under the License.
-
-
-            here we have a header (called h1), which is opened and closed
-            we need to perform a POST to the server so that when we head to our list, our item is noted!
-            here, we have the heading for the post request
-            declared is user-fav-1, which will be what the database looks for to add to the list
-            the button that the client touches to send to the server
-            do you see how we closed the html file with a backslash and the descriptor?
-            we opened and closed every type (html, head, form, title, etc. )
 -->
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
@@ -33,7 +23,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
-    <title>Databases Workshop!</title>
+    <title>The Database of Our Class</title>
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
@@ -62,50 +52,22 @@
           </div>
         </nav>
     <div class="jumbotron text-center">
-  <h5>Pulse High School Day presents...</h5>
-  <h1 style="font-size:60px;"> Databases Workshop</h1>
-  <h7>Led by Nora & Kelly Dunleavy</h7>
+  <h1 style="font-size:60px;">The Database of Our Class</h1>
+  <h1> </h1>
+  <h5> </h5>
 </div>
-<div align = "center" >
-  <img src="my-images/eceb.jpg" width="1000" height="300">
-</div>
-  <h5 align="center" bgcolor="#B8860B"> </h5>
-  <h2 align="center"> </h2>
-  <form style="white-space:pre" align = "center" method=POST action="/">
-    Let's meet the class! What is your name?<br>
-    <input type="text" name="user-fav-1" value="">
-    <input type="submit" value="Send">
-  </form>
-  <div class="container">
-    <p align="center">There is a growing need to streamline the collection and usage of data in all facets of life, including healthcare. To monitor patient status, to aid researchers in assessing the effectiveness of treatments, and to determine the costs and needs of medical centers, databases persist in bettering patient practice around the world. </p>
-    <h5 align="center" > </h5>
-  <div align = "center">
-</div>
-  <div class="row">
-    <div class="col-sm-4">
-      <h3><a class="nav-link" href="https://ece.illinois.edu">ECE Illinois</a></h3>
-      <p>2,295 students enrolled in 2017-2018</p>
-      <p>Founded in 1891</p>
-      <p>US News: #5 (EE) & #7 (CompE)</p>
-    </div>
-    <div class="col-sm-4">
-      <h3><a class="nav-link" href="https://pulse.ece.illinois.edu">ECE Pulse Horizons</a></h3>
-      <p>Founded in 2012</p>
-      <p>Imagine New Beginnings</p>
-    </div>
-    <div class="col-sm-4">
-      <h3><a class="nav-link" href="https://engineering.illinois.edu">Illinois Engineering</a></h3>
-      <p>9155 Undergraduate students</p>
-      <p>Founded 1868</p>
-      <p>$69,475 average starting salary</p>
-    </div>
-  </div>
+
+<div class="container">
+  <h1>Our Names!</h1>
+  {% for thing in top_fav_Items %}
+    <p>{{thing.item_name}}</p>
+  {% endfor %}
 
 </div>
 
 
     <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS {{top_fav_Items}} -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>

@@ -14,13 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from google.appengine.ext import ndb
+from google.appengine.ext import ndb #ndb stands for new database
 
-class Food(ndb.Model):
-  food_name = ndb.StringProperty(required=True)
-
-      
-    
-
-
-            
+class Item(ndb.Model):
+  item_name = ndb.StringProperty(required=True)
