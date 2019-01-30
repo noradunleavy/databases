@@ -33,6 +33,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="/showfavs">Our Class Database</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/intro">Introduction to Databases in Medicine</a>
+              </li>
             </ul>
           </div>
         </nav>
@@ -42,12 +45,37 @@
   <h7></h7>
 </div>
 <div align = "center" >
-  <img src="my-images/eceb.jpg" width="1000" height="300">
+</div>
+<div style="white-space:pre" align = "center" class="container">
+  <h2 style="font-size:40px;" align="center"> TASK:</h2>
+  <p align="center"> 1. While in Atom, go to "File", "Open", and find the entire folder zip file you downloaded "app-engine-starter" </p>
+  <p align="center"> 2. Take a look through the main.py file. This is where we accept some of the user inputs for our database (like your name!), and is sometimes called the controller! </p>
+  <p>There are three main components: the imports (line webapp2), the handlers (these respond to our requests!), and the app configuration. </p>
+  <img align = "center" src="my-images/main.png" height=400px width=800px>
+  <img align = "center" src="my-images/foodhandler.png" height=600px width=700px>
+  <p align="center"> 3. To launch the app in the command line, copy over the following: dev_appserver.py app.yaml </p>
+  <img align = "center" src="my-images/app.png" height=800px width=600px>
+  <p align="center"> 4. The root route (app = webapp2.WSGIApplication([('/', MainPage), #the root route], debug=True)) is the location where the handler is directed to. </p>
+  <p>You know how if you want to go to a specific part of a web application, you use /???? where ???? specifies one part of the application! This is where we use it comes from.</p>
+  <img align = "center" src="my-images/rootroute.png" height=400px width=600px>
+  <p align="center"> 5. TEMPLATES!!! WHAT WOULD WE DO WITHOUT THEM? these gems allow us to use external data, </p>
+  <p>but you have to import them to put them to use as part of Google App Engine...my personal favorite "import webapp2" :) </p>
+  <img align = "center" src="my-images/html.png" height=400px width=600px>
+  <p align="center"> 6. GETTING USER DATA AHHHHHHHH -> we use a form :) </p>
+  <img align = "center" src="my-images/form.png" height=400px width=900px>
+  <p align="center"> 7. To get the data you asked for.... use self.request.get() with or without an argument (which is what does inside the () of a method!)</p>
+  <p align="center"> 8. Want to deploy? Create an account on the <a href="https://console.cloud.google.com/getting-started">Google Platform Developer's console</a> </p>
+  <p>and run in the command line the following: gcloud app deploy app.yaml --project [STUDENTS_PROJECT_ID]</p>
+  <p>.... and go to http://[STUDENTS__PROJECT_ID].appspot.com to see your innovation! </p>
+  <h5 align="center"> </h5>
+<div align = "center">
+</div>
+
+
 </div>
   <h5 align="center" bgcolor="#B8860B"> </h5>
   <h2 align="center"> </h2>
   <div class="container">
-    <p align="center">There is a growing need to streamline the collection and usage of data in all facets of life, including healthcare. To monitor patient status, to aid researchers in assessing the effectiveness of treatments, and to determine the costs and needs of medical centers, databases persist in bettering patient practice around the world. </p>
     <h5 align="center" > </h5>
   <div align = "center">
 </div>

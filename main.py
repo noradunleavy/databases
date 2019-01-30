@@ -64,6 +64,11 @@ class DatabasesHandler(webapp2.RequestHandler):
         start_template = jinja_current_dir.get_template("templates/data.html")
         self.response.write(start_template.render())
 
+class IntroHandler(webapp2.RequestHandler):
+    def get(self):
+        start_template = jinja_current_dir.get_template("templates/intro.html")
+        self.response.write(start_template.render())
+
 
 app = webapp2.WSGIApplication([
     ('/', ItemHandler),
@@ -71,4 +76,5 @@ app = webapp2.WSGIApplication([
     ('/workshop', WorkshopHandler),
     ('/commandline', CommandHandler),
     ('/databases', DatabasesHandler),
+    ('/intro', IntroHandler),
 ], debug=True)
